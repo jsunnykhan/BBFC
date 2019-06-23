@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item android:id="@+id/home_nav"
+            android:title="HOME"
+            android:icon="@drawable/ic_home"/>
+
+        <item android:id="@+id/fixture_nav"
+            android:title="FIXTURE"
+            android:icon="@drawable/ic_matches"/>
+
+        <item android:id="@+id/team_nav"
+            android:title="TEAMS"
+            android:icon="@drawable/ic_teams"/>
+
+        <item android:id="@+id/history_nav"
+            android:title="HISTORY"
+            android:icon="@drawable/ic_history"/>
+
+        <item android:id="@+id/gallery"
+            android:title="GALLERY"
+            android:icon="@drawable/ic_image"/>
+
+    </group>
+
+    <View
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/whiteT"/>
+
+</menu>
