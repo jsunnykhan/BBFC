@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Animation myanim = AnimationUtils.loadAnimation(this , R.anim.prontpageanim);
         bbfcIv.setAnimation(myanim);
 
-       final Intent intent = new Intent(this , MainMainActivity.class);
+       final Intent intent = new Intent(this , ForConfirmation.class);
 
         Thread timer = new Thread(){
             public void run(){
