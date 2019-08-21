@@ -44,7 +44,7 @@
             android:theme="@style/Drawer.Custom.Dark"
             app:itemTextAppearance="@style/TextAppearance.AppCompat.Subhead"
             app:menu="@menu/navigation_drawer_layout"
-            app:headerLayout="@layout/nav_header"/>
+           />
 
     </android.support.v4.widget.DrawerLayout>
 

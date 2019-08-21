@@ -19,6 +19,10 @@
             android:title="TEAMS"
             android:icon="@drawable/ic_teams"/>
 
+        <item android:id="@+id/fantasy"
+            android:title="BBFC FANTASY"
+            android:icon="@drawable/ic_strategy"/>
+
         <item android:id="@+id/history_nav"
             android:title="HISTORY"
             android:icon="@drawable/ic_history"/>
@@ -26,6 +30,13 @@
         <item android:id="@+id/gallery"
             android:title="GALLERY"
             android:icon="@drawable/ic_image"/>
+
+        <item android:id="@+id/feed_back"
+            android:title="FEEDBACK"
+            />
+        <item android:id="@+id/copy"
+            android:title="©2020 NullStudio"
+            />
 
     </group>
 
