@@ -4,7 +4,6 @@ package com.nullstdio.bbfc2020.Activitys;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,8 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 
+import com.nullstdio.bbfc2020.FragmentAll.Fantasy;
 import com.nullstdio.bbfc2020.FragmentAll.FixtureFragment;
 import com.nullstdio.bbfc2020.FragmentAll.GallaryFragment;
 import com.nullstdio.bbfc2020.FragmentAll.HistoryFragment;
@@ -33,6 +32,7 @@ public class MainMainActivity extends AppCompatActivity implements NavigationVie
     private Fragment teamFragment;
     private Fragment historyFragment;
     private Fragment gallaryFragment;
+    private Fragment fantasy;
 
 
 
@@ -60,6 +60,7 @@ public class MainMainActivity extends AppCompatActivity implements NavigationVie
         teamFragment = new TeamFragment();
         historyFragment = new HistoryFragment();
         gallaryFragment = new GallaryFragment();
+        fantasy = new Fantasy();
 
 
         if (savedInstanceState == null){
@@ -118,6 +119,11 @@ public class MainMainActivity extends AppCompatActivity implements NavigationVie
             }
             case R.id.gallery :{
                 setFragment(gallaryFragment);
+                drawerLayout.closeDrawers();
+                break;
+            }
+            case R.id.fantasy:{
+                setFragment(fantasy);
                 drawerLayout.closeDrawers();
                 break;
             }
