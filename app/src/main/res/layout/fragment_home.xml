@@ -4,29 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FragmentAll.HomeFragment">
-
-    <android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    tools:context=".FragmentAll.HomeFragment"
+    android:background="@color/notgray">
 
 
-        <LinearLayout
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/homeRecycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-
-            <include layout="@layout/dashboard_layout"/>
-            <include layout="@layout/dashboard_layout"/>
-            <include layout="@layout/dashboard_layout"/>
-            <include layout="@layout/dashboard_layout"/>
-
-        </LinearLayout>
-
-
-    </android.support.v4.widget.NestedScrollView>
-
+            android:scrollbars="vertical"
+            android:scrollbarSize=".5dp"
+            />
 
 
 </LinearLayout>

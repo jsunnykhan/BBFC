@@ -18,6 +18,7 @@
         >
 
         <Button
+            android:id="@+id/day1"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Day 1"
@@ -35,6 +36,7 @@
 
 
         <Button
+            android:id="@+id/day2"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Day 2"
@@ -49,6 +51,7 @@
 
 
         <Button
+            android:id="@+id/day3"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Day 3"
@@ -60,31 +63,17 @@
             android:layout_gravity="center"
             android:background="@drawable/fixuter_button_design"/>
 
+
+
     </LinearLayout>
 
 
-    <android.support.v4.widget.NestedScrollView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fixureRecycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:orientation="vertical">
-
-           <include layout="@layout/fixure_support_layout" />
-           <include layout="@layout/fixure_support_layout" />
-           <include layout="@layout/fixure_support_layout" />
-           <include layout="@layout/fixure_support_layout" />
-           <include layout="@layout/fixure_support_layout" />
-           <include layout="@layout/fixure_support_layout" />
-           <include layout="@layout/fixure_support_layout" />
-
-       </LinearLayout>
-
-
-    </android.support.v4.widget.NestedScrollView>
-
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        tools:listitem="@layout/fixure_support_layout" />
 
 
 </LinearLayout>

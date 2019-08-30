@@ -1,4 +1,4 @@
-package com.nullstdio.bbfc2020;
+package com.nullstdio.bbfc2020.Activitys;
 
 
 import android.support.annotation.NonNull;
@@ -20,6 +20,7 @@ import com.nullstdio.bbfc2020.FragmentAll.GallaryFragment;
 import com.nullstdio.bbfc2020.FragmentAll.HistoryFragment;
 import com.nullstdio.bbfc2020.FragmentAll.HomeFragment;
 import com.nullstdio.bbfc2020.FragmentAll.TeamFragment;
+import com.nullstdio.bbfc2020.R;
 
 public class MainMainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 

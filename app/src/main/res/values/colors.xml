@@ -6,10 +6,11 @@
     <color name="ofsetColorPrimaryDark">#9000574B</color>
     <color name="colorAccent">#FFFFFF</color>
     <color name="white">#FFFFFF</color>
-    <color name="whiteT">#2FFFFFFF</color>
+    <color name="whiteT">#72FFFFFF</color>
     <color name="black">#000000</color>
     <color name="ferColor">#A81C9C84</color>
     <color name="gray">#A8676968</color>
+    <color name="notgray">#28676968</color>
     <color name="red">#FF0000</color>
     <color name="logo">#F5F5F5</color>
 

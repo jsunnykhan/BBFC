@@ -1,4 +1,4 @@
-package com.nullstdio.bbfc2020;
+package com.nullstdio.bbfc2020.Activitys;
 
 
 import android.content.Intent;
@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
+import com.nullstdio.bbfc2020.Activitys.ForConfirmation;
+import com.nullstdio.bbfc2020.R;
 
 public class MainActivity extends AppCompatActivity {
 
