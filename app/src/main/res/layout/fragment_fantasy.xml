@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FragmentAll.Fantasy"
-    android:padding="5dp">
+   >
 
 
     <LinearLayout
@@ -15,8 +15,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="500dp"
-            android:padding="5dp"
-            android:layout_marginTop="5dp"
             android:background="@drawable/ic_football_field"
             android:orientation="vertical">
 
@@ -386,11 +384,12 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:textSize="18dp"
+                android:layout_height="35dp"
+                android:textSize="16dp"
                 android:text="Team Formation"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:layout_weight="1"/>
 
             <Spinner
@@ -399,8 +398,8 @@
                 android:layout_height="35dp"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:layout_marginTop="3dp"
                 android:layout_weight="1"
-                android:layout_marginLeft="15dp"
                 android:textAlignment="center"
                 android:foregroundGravity="center">
 
