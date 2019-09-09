@@ -69,10 +69,7 @@ public class HomeFragment extends Fragment {
 
                     adapter = new HomeAdapter(getContext() , list);
                     recyclerView.setAdapter(adapter);
-                }else {
-                    Toast.makeText(getContext(), "Path Doesn't Exists", Toast.LENGTH_SHORT).show();
                 }
-
             }
 
             @Override
