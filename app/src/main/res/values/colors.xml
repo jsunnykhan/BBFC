@@ -12,6 +12,7 @@
     <color name="gray">#A8676968</color>
     <color name="notgray">#28676968</color>
     <color name="red">#FF0000</color>
+    <color name="offred">#85FF0000</color>
     <color name="logo">#F5F5F5</color>
 
 </resources>

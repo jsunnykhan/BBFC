@@ -69,13 +69,10 @@ public class FixtureFragment extends Fragment{
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        ref1 = FirebaseDatabase.getInstance().getReference().child("fixture").child("2019").child("Day 1");
-        ref2 = FirebaseDatabase.getInstance().getReference().child("fixture").child("2019").child("Day 1");
-        ref3 = FirebaseDatabase.getInstance().getReference().child("fixture").child("2019").child("Day 1");
-
+        ref1 = FirebaseDatabase.getInstance().getReference().child("fixture").child("2019");
 
         day1.setBackgroundDrawable(ContextCompat.getDrawable(getContext() , R.drawable.mark_button));
-        collectData(ref1);
+        collectData(ref1.child("Day 1"));
 
 
 
@@ -87,7 +84,7 @@ public class FixtureFragment extends Fragment{
                 day1.setBackgroundDrawable(ContextCompat.getDrawable(getContext() , R.drawable.mark_button));
                 day2.setBackgroundDrawable(ContextCompat.getDrawable(getContext() , R.drawable.fixuter_button_design));
                 day3.setBackgroundDrawable(ContextCompat.getDrawable(getContext() , R.drawable.fixuter_button_design));
-                collectData(ref1);
+                collectData(ref1.child("Day 1"));
 
             }
         });
@@ -98,7 +95,7 @@ public class FixtureFragment extends Fragment{
                 day2.setBackgroundDrawable(ContextCompat.getDrawable(getContext(), R.drawable.mark_button));
                 day1.setBackgroundDrawable(ContextCompat.getDrawable(getContext(), R.drawable.fixuter_button_design));
                 day3.setBackgroundDrawable(ContextCompat.getDrawable(getContext(), R.drawable.fixuter_button_design));
-                collectData(ref2);
+                collectData(ref1.child("Day 2"));
             }
         });
 
@@ -108,7 +105,7 @@ public class FixtureFragment extends Fragment{
                 day3.setBackgroundDrawable(ContextCompat.getDrawable(getContext() , R.drawable.mark_button));
                 day2.setBackgroundDrawable(ContextCompat.getDrawable(getContext() , R.drawable.fixuter_button_design));
                 day1.setBackgroundDrawable(ContextCompat.getDrawable(getContext() , R.drawable.fixuter_button_design));
-                collectData(ref3);
+                collectData(ref1.child("Day3"));
 
             }
         });
@@ -129,7 +126,37 @@ public class FixtureFragment extends Fragment{
 
                 if (dataSnapshot.exists()){
                     for (DataSnapshot data : dataSnapshot.getChildren()) {
-                        FixureModel re = data.getValue(FixureModel.class);
+
+                        String a = (String) data.child("TeamAName").getValue();
+                        String b = (String) data.child("TeamBName").getValue();
+                        String c= (String) data.child("Date").getValue();
+                        String d= (String) data.child("Time").getValue();
+                        String e= (String) data.child("matchId").getValue();
+
+                        boolean f = (boolean) data.child("Ascore").getValue();
+                        boolean g = (boolean) data.child("Bscore").getValue();
+
+                        String teamAScore = null;
+                        String teamBScore = null;
+
+
+                        if (f== true || g == true ){
+
+                            if (f){
+                                teamAScore = data.child(a).child("Score").getChildrenCount()+"";
+                            }
+                            else {
+                                teamAScore = 0+"";
+                            }
+                            if (g){
+                                teamBScore = data.child(b).child("Score").getChildrenCount()+"";
+                            }else {
+                                teamBScore = 0+"";
+                            }
+
+                        }
+
+                        FixureModel re = new FixureModel(c , e , f , g , a , b , d,teamAScore,teamBScore);
                         list.add(re);
 
                     }
