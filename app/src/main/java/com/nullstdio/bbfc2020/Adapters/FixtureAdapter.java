@@ -40,9 +40,6 @@ public class FixtureAdapter extends RecyclerView.Adapter<FixtureAdapter.holder> 
     boolean scoreA;
     boolean scoreB;
 
-
-
-
     public FixtureAdapter(Context context, ArrayList<FixureModel> models) {
         this.context = context;
         this.models = models;
@@ -85,6 +82,7 @@ public class FixtureAdapter extends RecyclerView.Adapter<FixtureAdapter.holder> 
             holder.timeAndInvisible.setText(time);
 
         }
+
 
 
 

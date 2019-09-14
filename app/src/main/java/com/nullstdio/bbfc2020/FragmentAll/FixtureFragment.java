@@ -3,8 +3,10 @@ package com.nullstdio.bbfc2020.FragmentAll;
 
 import android.annotation.SuppressLint;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,6 +19,7 @@ import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -43,12 +46,11 @@ public class FixtureFragment extends Fragment{
 
     private RecyclerView recyclerView ;
     private DatabaseReference ref1 ;
-    private DatabaseReference ref2 ;
-    private DatabaseReference ref3 ;
 
     public FixtureFragment() {
 
     }
+
 
 
     @Override
@@ -56,6 +58,8 @@ public class FixtureFragment extends Fragment{
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_fixture, container, false);
+
+
 
         day1 = (Button) view.findViewById(R.id.day1);
         day2 = (Button) view.findViewById(R.id.day2);
@@ -125,19 +129,19 @@ public class FixtureFragment extends Fragment{
                 list = new ArrayList<FixureModel>();
 
                 if (dataSnapshot.exists()){
-                    for (DataSnapshot data : dataSnapshot.getChildren()) {
+                            for (DataSnapshot data : dataSnapshot.getChildren()) {
 
-                        String a = (String) data.child("TeamAName").getValue();
-                        String b = (String) data.child("TeamBName").getValue();
-                        String c= (String) data.child("Date").getValue();
-                        String d= (String) data.child("Time").getValue();
-                        String e= (String) data.child("matchId").getValue();
+                                String a = (String) data.child("TeamAName").getValue();
+                                String b = (String) data.child("TeamBName").getValue();
+                                String c= (String) data.child("Date").getValue();
+                                String d= (String) data.child("Time").getValue();
+                                String e= (String) data.child("matchId").getValue();
 
-                        boolean f = (boolean) data.child("Ascore").getValue();
-                        boolean g = (boolean) data.child("Bscore").getValue();
+                                boolean f = (boolean) data.child("Ascore").getValue();
+                                boolean g = (boolean) data.child("Bscore").getValue();
 
-                        String teamAScore = null;
-                        String teamBScore = null;
+                                String teamAScore = null;
+                                String teamBScore = null;
 
 
                         if (f== true || g == true ){

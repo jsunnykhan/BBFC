@@ -9,22 +9,20 @@ import android.view.ViewGroup;
 
 import com.nullstdio.bbfc2020.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class GallaryFragment extends Fragment {
+public class Fixture_details extends Fragment {
 
 
-    public GallaryFragment() {
-        // Required empty public constructor
+    public Fixture_details() {
+
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gallary, container, false);
+        return inflater.inflate(R.layout.fragment_fixture_details, container, false);
+
+
     }
 
 }

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/groupName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Group A"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:textSize="22sp"
+            />
+
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginBottom="10dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:maxLines="1"
+                android:maxLength="20"
+                android:minWidth="140dp"
+                android:maxWidth="140dp"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:fontFamily="@font/montserrat"
+                android:layout_weight="2"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:minWidth="14sp"
+                android:maxWidth="14sp"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:minWidth="14sp"
+                android:maxWidth="14sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:minWidth="14sp"
+                android:maxWidth="14sp"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="L"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:minWidth="14sp"
+                android:maxWidth="14sp"
+                android:fontFamily="@font/montserrat"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pt"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:minWidth="14sp"
+                android:maxWidth="14sp"
+                android:fontFamily="@font/montserrat"
+                android:layout_weight="1"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/parentsStandingRecycler"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+</LinearLayout>

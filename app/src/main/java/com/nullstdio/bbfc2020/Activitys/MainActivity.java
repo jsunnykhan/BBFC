@@ -7,8 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-
-import com.nullstdio.bbfc2020.Activitys.ForConfirmation;
 import com.nullstdio.bbfc2020.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,8 +20,13 @@ public class MainActivity extends AppCompatActivity {
 
         bbfcIv = (ImageView) findViewById(R.id.splashIv);
 
-        Animation myanim = AnimationUtils.loadAnimation(this , R.anim.prontpageanim);
-        bbfcIv.setAnimation(myanim);
+        try {
+            Animation myanim = AnimationUtils.loadAnimation(this , R.anim.prontpageanim);
+            bbfcIv.setAnimation(myanim);
+        }catch (Exception e){
+
+        }
+
 
        final Intent intent = new Intent(this , ForConfirmation.class);
 

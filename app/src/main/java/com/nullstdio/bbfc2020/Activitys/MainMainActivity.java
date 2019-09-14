@@ -15,7 +15,7 @@ import android.view.MenuItem;
 
 import com.nullstdio.bbfc2020.FragmentAll.Fantasy;
 import com.nullstdio.bbfc2020.FragmentAll.FixtureFragment;
-import com.nullstdio.bbfc2020.FragmentAll.GallaryFragment;
+import com.nullstdio.bbfc2020.FragmentAll.StandingFragment;
 import com.nullstdio.bbfc2020.FragmentAll.HistoryFragment;
 import com.nullstdio.bbfc2020.FragmentAll.HomeFragment;
 import com.nullstdio.bbfc2020.FragmentAll.TeamFragment;
@@ -59,7 +59,7 @@ public class MainMainActivity extends AppCompatActivity implements NavigationVie
         fixtureFragment = new FixtureFragment();
         teamFragment = new TeamFragment();
         historyFragment = new HistoryFragment();
-        gallaryFragment = new GallaryFragment();
+        gallaryFragment = new StandingFragment();
         fantasy = new Fantasy();
 
 

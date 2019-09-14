@@ -15,6 +15,10 @@
             android:title="FIXTURE"
             android:icon="@drawable/ic_matches"/>
 
+        <item android:id="@+id/gallery"
+            android:title="STANDING"
+            android:icon="@drawable/ic_bar_chart"/>
+
         <item android:id="@+id/team_nav"
             android:title="TEAMS"
             android:icon="@drawable/ic_teams"/>
@@ -27,9 +31,6 @@
             android:title="HISTORY"
             android:icon="@drawable/ic_history"/>
 
-        <item android:id="@+id/gallery"
-            android:title="GALLERY"
-            android:icon="@drawable/ic_image"/>
 
         <item android:id="@+id/feed_back"
             android:title="FEEDBACK"
