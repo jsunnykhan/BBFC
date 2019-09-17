@@ -6,145 +6,19 @@
     android:orientation="vertical"
     tools:context=".FragmentAll.TeamFragment">
 
-
-    <HorizontalScrollView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/teamRecycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/logo">
+        android:orientation="horizontal"/>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bayal_boys_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginRight="10dp"
-                />
-        </LinearLayout>
-
-
-
-    </HorizontalScrollView>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/playerRecicler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"/>
 
 
 </LinearLayout>
