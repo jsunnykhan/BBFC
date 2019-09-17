@@ -46,7 +46,6 @@ public class TeamFragment extends Fragment  {
 
     String teamName;
     String imagePath;
-    String name;
 
     public TeamFragment() {
 
@@ -85,7 +84,6 @@ public class TeamFragment extends Fragment  {
                         TeamImager teamDetails = new TeamImager(teamName , imagePath);
                         list.add(teamDetails);
                     }
-                    name = list.get(0).getTeamName();
                     TeamInformationAdapter adapter = new TeamInformationAdapter(getContext() , list);
                     teamPhoto.setAdapter(adapter);
                 }
@@ -109,7 +107,7 @@ public class TeamFragment extends Fragment  {
     public BroadcastReceiver mreciver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-             name = intent.getStringExtra("teamName");
+             String name = intent.getStringExtra("teamName");
 
 
             //for defenders
