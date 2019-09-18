@@ -82,12 +82,13 @@
                     app:shape_diagonal_direction="left"
                     app:shape_diagonal_position="bottom">
 
+
                     <ImageView
                         android:id="@+id/playerImage"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="20dp"
                         android:scaleType="centerCrop"
+                        android:padding="40dp"
 
                         android:src="@drawable/ic_football_player" />
 
@@ -286,18 +287,11 @@
             android:layout_below="@+id/c"
             android:orientation="vertical"
             android:layout_gravity="center"
-
             android:layout_marginBottom="30dp"
             android:background="@drawable/mark_stoke">
 
 
-            <TextView
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text="Cards"
-                android:layout_marginLeft="5dp"
-                android:fontFamily="@font/montserrat"/>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -313,19 +307,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:gravity="center"
                 android:layout_gravity="center"
+                android:layout_weight="1"
                 >
 
 
                 <TextView
-                    android:layout_width="120dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:text="Yellow Cards"
                     android:fontFamily="@font/montserrat"/>
                 <TextView
-                    android:layout_width="120dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:text="Red Card"
@@ -340,7 +334,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp">
+                android:layout_marginLeft="10dp"
+                android:layout_weight=".5">
 
 
                 <TextView
@@ -363,8 +358,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:gravity="center"
+
                 android:layout_gravity="center"
+                android:layout_weight="1"
                 >
 
 

@@ -58,7 +58,7 @@ public class PlayerInformationsFragment extends Fragment {
 
         Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/bbfc-37a18.appspot.com/o/team_icon%2F20190915_045803.png?alt=media&token=d386be45-6dbf-4f4f-b5f7-89880019f0fd")
                 .into(teamImage);
-        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/bbfc-37a18.appspot.com/o/players%2FpngPlayers%2Fsunnypng.png?alt=media&token=10bc1a23-9912-420a-9133-7de27425c8ac")
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/bbfc-37a18.appspot.com/o/players%2FpngPlayers%2FSolaiman%20Khan.png?alt=media&token=9e55da7e-84ca-42df-b93e-294dbda6470f")
                 .into(playerImage);
 
         return view;

@@ -13,8 +13,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
-
 import com.nullstdio.bbfc2020.Interface.OnNoteListener;
 import com.nullstdio.bbfc2020.R;
 import com.nullstdio.bbfc2020.modelClass.TeamImager;
@@ -55,8 +53,10 @@ public class TeamInformationAdapter extends RecyclerView.Adapter<TeamInformation
             @Override
             public void onNoteClick(View view, int position) {
                 name = itemData.get(position).getTeamName() ;
+                String image = itemData.get(position).getImagePath() ;
                 Intent intent = new Intent("team_Name");
                 intent.putExtra("teamName" , name);
+                intent.putExtra("teamimage" , image);
                 LocalBroadcastManager.getInstance(context).sendBroadcast(intent);
             }
         });

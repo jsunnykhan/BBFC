@@ -9,6 +9,8 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -49,6 +51,8 @@ public class TeamFragment extends Fragment  {
     String teamName;
     String imagePath;
 
+    Fragment teamFragment;
+
     public TeamFragment() {
 
     }
@@ -63,7 +67,8 @@ public class TeamFragment extends Fragment  {
         teamPhoto = view.findViewById(R.id.teamRecycler);
         playerrecycler = view.findViewById(R.id.playerRecicler);
 
-        
+
+
         teamRef = FirebaseDatabase.getInstance().getReference("teams");
 
         teamPhoto.setHasFixedSize(true);
@@ -110,6 +115,7 @@ public class TeamFragment extends Fragment  {
         @Override
         public void onReceive(Context context, Intent intent) {
              String name = intent.getStringExtra("teamName");
+             final String image = intent.getStringExtra("teamimage");
 
 
 
@@ -185,7 +191,7 @@ public class TeamFragment extends Fragment  {
                             }
                         }
 
-                        PlayersCatagoriesAdapter adapter = new PlayersCatagoriesAdapter(getContext() , finalList);
+                        PlayersCatagoriesAdapter adapter = new PlayersCatagoriesAdapter(getContext() , finalList , teamFragment , image);
                         adapter.notifyDataSetChanged();
                         playerrecycler.setAdapter(adapter);
                     }
@@ -203,6 +209,9 @@ public class TeamFragment extends Fragment  {
         }
 
     };
+
+
+
 
 
 }
