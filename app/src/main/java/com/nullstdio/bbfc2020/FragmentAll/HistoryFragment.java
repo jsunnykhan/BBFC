@@ -29,7 +29,7 @@ public class HistoryFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_history, container, false);
 
         b1 = view.findViewById(R.id.clickButton);
-        fixture = new Fixture_details();
+        fixture = new PlayerInformationsFragment();
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,6 +1,7 @@
 package com.nullstdio.bbfc2020.FragmentAll;
 
 
+import android.app.ActionBar;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -22,6 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.nullstdio.bbfc2020.Activitys.MainActivity;
+import com.nullstdio.bbfc2020.Activitys.MainMainActivity;
 import com.nullstdio.bbfc2020.Adapters.PlayersAdapter;
 import com.nullstdio.bbfc2020.Adapters.PlayersCatagoriesAdapter;
 import com.nullstdio.bbfc2020.Adapters.TeamInformationAdapter;
@@ -61,7 +63,7 @@ public class TeamFragment extends Fragment  {
         teamPhoto = view.findViewById(R.id.teamRecycler);
         playerrecycler = view.findViewById(R.id.playerRecicler);
 
-
+        
         teamRef = FirebaseDatabase.getInstance().getReference("teams");
 
         teamPhoto.setHasFixedSize(true);
@@ -108,6 +110,7 @@ public class TeamFragment extends Fragment  {
         @Override
         public void onReceive(Context context, Intent intent) {
              String name = intent.getStringExtra("teamName");
+
 
 
             //for defenders

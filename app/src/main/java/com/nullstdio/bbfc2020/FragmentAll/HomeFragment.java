@@ -69,6 +69,8 @@ public class HomeFragment extends Fragment {
 
                     adapter = new HomeAdapter(getContext() , list);
                     recyclerView.setAdapter(adapter);
+                }else {
+                    Toast.makeText(getContext(), "No Data", Toast.LENGTH_SHORT).show();
                 }
             }
 

@@ -1,6 +1,7 @@
 package com.nullstdio.bbfc2020.Activitys;
 
 
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -9,23 +10,22 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.nullstdio.bbfc2020.FragmentAll.Fantasy;
 import com.nullstdio.bbfc2020.FragmentAll.FixtureFragment;
-import com.nullstdio.bbfc2020.FragmentAll.StandingFragment;
 import com.nullstdio.bbfc2020.FragmentAll.HistoryFragment;
 import com.nullstdio.bbfc2020.FragmentAll.HomeFragment;
+import com.nullstdio.bbfc2020.FragmentAll.StandingFragment;
 import com.nullstdio.bbfc2020.FragmentAll.TeamFragment;
 import com.nullstdio.bbfc2020.R;
 
-public class MainMainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class MainMainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
-    NavigationView navigationView;
+    private NavigationView navigationView;
 
     private Fragment homeFragment;
     private Fragment fixtureFragment;
@@ -35,18 +35,17 @@ public class MainMainActivity extends AppCompatActivity implements NavigationVie
     private Fragment fantasy;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_main);
 
-        toolbar =  findViewById(R.id.toolbarC);
+        toolbar = findViewById(R.id.toolbarC);
         setSupportActionBar(toolbar);
         drawerLayout = findViewById(R.id.drawerlayout);
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this , drawerLayout , toolbar , R.string.start , R.string.close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.start, R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -63,11 +62,10 @@ public class MainMainActivity extends AppCompatActivity implements NavigationVie
         fantasy = new Fantasy();
 
 
-        if (savedInstanceState == null){
+        if (savedInstanceState == null) {
             setFragment(homeFragment);
             navigationView.setCheckedItem(R.id.home_nav);
         }
-
 
 
     }
@@ -82,11 +80,10 @@ public class MainMainActivity extends AppCompatActivity implements NavigationVie
     }
 
 
-
     private void setFragment(Fragment fragment) {
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragmentContainer , fragment);
+        transaction.replace(R.id.fragmentContainer, fragment);
         transaction.commit();
 
     }
@@ -95,42 +92,40 @@ public class MainMainActivity extends AppCompatActivity implements NavigationVie
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-        switch(menuItem.getItemId()){
+        switch (menuItem.getItemId()) {
 
-            case R.id.home_nav :{
+            case R.id.home_nav: {
                 setFragment(homeFragment);
                 drawerLayout.closeDrawers();
                 break;
             }
-            case R.id.fixture_nav :{
+            case R.id.fixture_nav: {
                 setFragment(fixtureFragment);
                 drawerLayout.closeDrawers();
                 break;
             }
-            case R.id.team_nav :{
+            case R.id.team_nav: {
                 setFragment(teamFragment);
                 drawerLayout.closeDrawers();
                 break;
             }
-            case R.id.history_nav :{
+            case R.id.history_nav: {
                 setFragment(historyFragment);
                 drawerLayout.closeDrawers();
                 break;
             }
-            case R.id.gallery :{
+            case R.id.gallery: {
                 setFragment(gallaryFragment);
                 drawerLayout.closeDrawers();
                 break;
             }
-            case R.id.fantasy:{
+            case R.id.fantasy: {
                 setFragment(fantasy);
                 drawerLayout.closeDrawers();
                 break;
             }
-
-
-
         }
         return true;
     }
 }
+
