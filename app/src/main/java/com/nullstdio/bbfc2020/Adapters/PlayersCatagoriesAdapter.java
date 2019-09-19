@@ -22,13 +22,13 @@ public class PlayersCatagoriesAdapter extends RecyclerView.Adapter<PlayersCatago
 
     private Context context;
     private List<PlayesCatagories> groupItems;
-    Fragment teamFragment;
+
     String image;
 
-    public PlayersCatagoriesAdapter(Context context, List<PlayesCatagories> groupItems, final Fragment teamFragment ,String image) {
+    public PlayersCatagoriesAdapter(Context context, List<PlayesCatagories> groupItems , String image) {
         this.context = context;
         this.groupItems = groupItems;
-        this.teamFragment = teamFragment;
+
         this.image =image;
     }
     @NonNull
@@ -46,7 +46,7 @@ public class PlayersCatagoriesAdapter extends RecyclerView.Adapter<PlayersCatago
 
         List<Players_Informations> data = groupItems.get(position).getLists();
 
-        PlayersAdapter myItemAdapter = new PlayersAdapter(context , data , teamFragment ,image);
+        PlayersAdapter myItemAdapter = new PlayersAdapter(context , data  ,image);
 
         holder.playersRe.setHasFixedSize(true);
         holder.playersRe.setLayoutManager(new LinearLayoutManager(context , LinearLayoutManager.VERTICAL , false));

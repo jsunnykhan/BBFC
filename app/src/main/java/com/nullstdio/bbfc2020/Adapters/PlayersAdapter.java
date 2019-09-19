@@ -1,24 +1,22 @@
 package com.nullstdio.bbfc2020.Adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
+
+
 
 import com.nullstdio.bbfc2020.FragmentAll.PlayerInformationsFragment;
-import com.nullstdio.bbfc2020.FragmentAll.TeamFragment;
-import com.nullstdio.bbfc2020.Interface.OnNoteListener;
 import com.nullstdio.bbfc2020.Interface.OnPlayerClick;
 import com.nullstdio.bbfc2020.R;
 import com.nullstdio.bbfc2020.modelClass.Players_Informations;
@@ -32,13 +30,11 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.PlayerVi
 
     List<Players_Informations> players ;
     Context context ;
-    Fragment teamFragment = new TeamFragment();
     String image;
 
-    public PlayersAdapter(Context context , List<Players_Informations> players , final Fragment teamFragment , String image) {
+    public PlayersAdapter(Context context , List<Players_Informations> players , String image) {
         this.players = players;
         this.context = context;
-        this.teamFragment = teamFragment;
         this.image = image;
     }
 
@@ -68,8 +64,7 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.PlayerVi
             public void onPlayerClick(View view, int position) {
 
 
-
-
+                Context mcontext = view.getContext();
 
                 try {
                     String name = players.get(position).getFullName();
@@ -86,14 +81,23 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.PlayerVi
                     args.putString("p_teamImage", image);
 
                     //set Fragmentclass Arguments
-                    PlayerInformationsFragment fragobj = new PlayerInformationsFragment();
-                    fragobj.setArguments(args);
-                    FragmentManager fragmentManager = teamFragment.getActivity().getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.add(R.id.fragmentContainer, fragobj);
-                    fragmentTransaction.hide(teamFragment);
-                    fragmentTransaction.addToBackStack(null);
+                    PlayerInformationsFragment fragment = new PlayerInformationsFragment();
+                    fragment.setArguments(args);
+
+
+                    FragmentTransaction fragmentTransaction = ((FragmentActivity)mcontext).getSupportFragmentManager().beginTransaction();
+
+                    fragmentTransaction.replace(R.id.fragmentContainer, fragment);
+                    fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+
+
+                    fragmentTransaction.addToBackStack("Fragment tag");
+
+
                     fragmentTransaction.commit();
+
+
+
 
                 }catch (Exception e){
                     Log.d("Errors" , e+"");

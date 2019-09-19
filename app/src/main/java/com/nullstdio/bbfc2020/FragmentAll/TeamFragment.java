@@ -51,8 +51,6 @@ public class TeamFragment extends Fragment  {
     String teamName;
     String imagePath;
 
-    Fragment teamFragment;
-
     public TeamFragment() {
 
     }
@@ -63,6 +61,7 @@ public class TeamFragment extends Fragment  {
                              Bundle savedInstanceState) {
 
         View view =  inflater.inflate(R.layout.fragment_team, container, false);
+
 
         teamPhoto = view.findViewById(R.id.teamRecycler);
         playerrecycler = view.findViewById(R.id.playerRecicler);
@@ -191,7 +190,7 @@ public class TeamFragment extends Fragment  {
                             }
                         }
 
-                        PlayersCatagoriesAdapter adapter = new PlayersCatagoriesAdapter(getContext() , finalList , teamFragment , image);
+                        PlayersCatagoriesAdapter adapter = new PlayersCatagoriesAdapter(getContext() , finalList , image);
                         adapter.notifyDataSetChanged();
                         playerrecycler.setAdapter(adapter);
                     }
