@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.nullstdio.bbfc2020.R;
 import com.squareup.picasso.Picasso;
@@ -56,10 +57,40 @@ public class PlayerInformationsFragment extends Fragment {
         red = view.findViewById(R.id.redCard);
 
 
-        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/bbfc-37a18.appspot.com/o/team_icon%2F20190915_045803.png?alt=media&token=d386be45-6dbf-4f4f-b5f7-89880019f0fd")
-                .into(teamImage);
-        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/bbfc-37a18.appspot.com/o/players%2FpngPlayers%2FSolaiman%20Khan.png?alt=media&token=9e55da7e-84ca-42df-b93e-294dbda6470f")
-                .into(playerImage);
+        Bundle arg = getArguments();
+
+        if (arg != null){
+
+            String name = arg.getString("p_name");
+            String jersy = arg.getString("p_jer");
+            String positi = arg.getString("p_posi");
+            String p_Image = arg.getString("p_playerImage");
+            String p_TImage = arg.getString("p_teamImage");
+            String p_Nname = arg.getString("p_Nname");
+
+            playerName1.setText(name);
+            playerName2.setText(name);
+            jersy1.setText(jersy);
+            jersy2.setText(jersy);
+            positions.setText(positi);
+            nickName.setText(p_Nname);
+
+            try {
+                Picasso.get().load(p_TImage).into(teamImage);
+                Picasso.get().load(p_Image).into(playerImage);
+            }catch (Exception e){
+
+            }
+
+
+
+
+
+
+        }
+
+
+
 
         return view;
     }

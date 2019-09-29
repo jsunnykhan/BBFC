@@ -37,7 +37,7 @@
                         android:id="@+id/jersey1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4"
+                        android:text="0"
                         android:fontFamily="@font/montserrat"
                         android:textSize="100sp"/>
 
@@ -45,10 +45,12 @@
                         android:id="@+id/playerName1"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:text="Md.Sweet khan Sunny"
+                        android:text="Name"
                         android:textSize="20sp"
                         android:fontFamily="@font/montserrat"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+
+                        />
 
 
 
@@ -125,7 +127,7 @@
                             android:id="@+id/playerAssist"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1"
+                            android:text="0"
                             android:textSize="22sp"
                             android:fontFamily="@font/montserrat"/>
 
@@ -149,7 +151,7 @@
                             android:id="@+id/playerGoals"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1"
+                            android:text="0"
                             android:textSize="22sp"
                             android:fontFamily="@font/montserrat"/>
 
@@ -254,7 +256,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
-                    android:text="Md.Sweet khan Sunny"
+                    android:text=""
                     android:id="@+id/fullName"
                     android:fontFamily="@font/montserrat"/>
                 <TextView
@@ -262,21 +264,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
-                    android:text="Sunny"
+                    android:text=""
                     android:fontFamily="@font/montserrat"/>
                 <TextView
                     android:id="@+id/playerPosition"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
-                    android:text="Defender"
+                    android:text=""
                     android:fontFamily="@font/montserrat"/>
                 <TextView
                     android:id="@+id/jersey2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
-                    android:text="4"
+                    android:text=""
                     android:fontFamily="@font/montserrat"/>
 
             </LinearLayout>
@@ -374,7 +376,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
-                    android:text="1"
+                    android:text="0"
                     android:id="@+id/yelloCard"
                     android:fontFamily="@font/montserrat"/>
                 <TextView

@@ -66,11 +66,11 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.PlayerVi
 
                 Context mcontext = view.getContext();
 
-                try {
                     String name = players.get(position).getFullName();
                     String jer = players.get(position).getJersyNumber();
                     String posi = players.get(position).getPlayerPosition();
-                    String playerImage = players.get(position).getImagePath();
+                    String playerImage = players.get(position).getImageFlat();
+                    String Nname = players.get(position).getNname();
 
 
                     Bundle args = new Bundle();
@@ -79,6 +79,7 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.PlayerVi
                     args.putString("p_posi", posi);
                     args.putString("p_playerImage", playerImage);
                     args.putString("p_teamImage", image);
+                    args.putString("p_Nname", Nname);
 
                     //set Fragmentclass Arguments
                     PlayerInformationsFragment fragment = new PlayerInformationsFragment();
@@ -99,9 +100,6 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.PlayerVi
 
 
 
-                }catch (Exception e){
-                    Log.d("Errors" , e+"");
-                }
 
 
             }
