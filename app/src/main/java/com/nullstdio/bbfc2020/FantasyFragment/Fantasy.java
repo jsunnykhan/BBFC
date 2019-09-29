@@ -1,4 +1,4 @@
-package com.nullstdio.bbfc2020.FragmentAll;
+package com.nullstdio.bbfc2020.FantasyFragment;
 
 
 import android.os.Bundle;

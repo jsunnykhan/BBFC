@@ -13,10 +13,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.nullstdio.bbfc2020.FragmentAll.Fantasy;
+import com.nullstdio.bbfc2020.FantasyFragment.Fantasy;
 import com.nullstdio.bbfc2020.FragmentAll.FixtureFragment;
 import com.nullstdio.bbfc2020.FragmentAll.HistoryFragment;
 import com.nullstdio.bbfc2020.FragmentAll.HomeFragment;
+import com.nullstdio.bbfc2020.FragmentAll.MainFantasy;
 import com.nullstdio.bbfc2020.FragmentAll.StandingFragment;
 import com.nullstdio.bbfc2020.FragmentAll.TeamFragment;
 import com.nullstdio.bbfc2020.R;
@@ -59,7 +60,7 @@ public class MainMainActivity extends AppCompatActivity implements NavigationVie
         teamFragment = new TeamFragment();
         historyFragment = new HistoryFragment();
         gallaryFragment = new StandingFragment();
-        fantasy = new Fantasy();
+        fantasy = new MainFantasy();
 
 
         if (savedInstanceState == null) {

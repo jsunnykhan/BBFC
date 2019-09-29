@@ -13,6 +13,10 @@
     <color name="notgray">#28676968</color>
     <color name="red">#FF0000</color>
     <color name="offred">#85FF0000</color>
+    <color name="facebook">#7E0835EE</color>
     <color name="logo">#F5F5F5</color>
+    <color name="coffee">#400747</color>
+    <color name="coffeeT">#531E59</color>
+    <color name="coffeeB">#380442</color>
 
 </resources>

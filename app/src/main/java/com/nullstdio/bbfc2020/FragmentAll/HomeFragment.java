@@ -53,7 +53,6 @@ public class HomeFragment extends Fragment {
 
         reference.addValueEventListener(new ValueEventListener() {
 
-            DatabaseReference ref = reference.push();
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
@@ -65,12 +64,10 @@ public class HomeFragment extends Fragment {
                         HomeModel re = data.getValue(HomeModel.class);
                         list.add(re);
                     }
-
-
                     adapter = new HomeAdapter(getContext() , list);
                     recyclerView.setAdapter(adapter);
                 }else {
-                    Toast.makeText(getContext(), "No Data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "No Data Found", Toast.LENGTH_SHORT).show();
                 }
             }
 

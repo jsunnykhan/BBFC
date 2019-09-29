@@ -42,7 +42,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.Holder> {
         holder.textView.setText(homeModels.get(position).getTitle());
         String path = homeModels.get(position).getImage_path();
 
-        Toast.makeText(context, path, Toast.LENGTH_LONG).show();
         Picasso.get().
                 load(path).into(holder.imageView);
 
